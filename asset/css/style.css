@@ -1,0 +1,128 @@
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-heading-color: #212832;
+    --primary-text-color: #696d76;
+    --primary-color: #7264d6;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Open Sans", sans-serif;
+}
+
+input,
+select,
+textarea,
+button {
+    font-family: inherit;
+    font-size: inherit;
+}
+
+button {
+    border: transparent;
+    outline: none;
+}
+
+/* Common  */
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    width: 1170px;
+    margin: 0 auto;
+    max-width: calc(100% - 48px);
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    height: 5.2rem;
+    padding: 1.2rem 2.8rem;
+    border-radius: 0.6rem;
+    background: #212832;
+    cursor: pointer;
+}
+
+/* Header */
+
+.header {
+    position: sticky;
+    top: -3rem;
+    padding: 4.2rem 0 1.2rem;
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: brightness(200%) blur(3px);
+    -webkit-backdrop-filter: brightness(200%) blur(3px);
+}
+.header-inner {
+    display: flex;
+    align-items: center;
+}
+
+.header__nav-wrapper {
+    margin-left: 7rem;
+}
+
+.header__nav-list {
+    display: flex;
+    column-gap: 4rem;
+}
+
+.header__nav-item {
+    position: relative;
+    padding: 0.4rem 0.8rem;
+    color: var(--primary-text-color);
+    font-size: 1.6rem;
+    line-height: 1.75; /* 175% */
+}
+
+.header__nav-item:hover {
+    color: var(--primary-heading-color);
+    text-shadow: -0.03rem -0.03rem, 0.03rem 0.03rem;
+}
+
+.header__nav-item:hover::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0.4rem;
+    right: 0.4rem;
+    bottom: -0.6rem;
+    height: 0.1rem;
+    background: var(--primary-color);
+}
+
+.header__action {
+    display: flex;
+    margin-left: auto;
+}
+
+.login-btn,
+.sign-up-btn {
+    font-size: 1.6rem;
+    font-weight: 600;
+    line-height: 1.75; /* 175% */
+}
+
+.login-btn {
+    color: var(--primary-heading-color);
+    background: transparent;
+}
+
+.sign-up-btn {
+    color: #fff;
+}
+
+.sign-up-btn:hover {
+    background: var(--primary-color);
+    color: var(--primary-heading-color);
+}
